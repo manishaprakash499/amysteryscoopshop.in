@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>A Mystery Scoop Shop | Hand-Scooped Surprises</title>
+
+    <meta name="description" content="A Mystery Scoop Shop - Hand-scooped surprises, accessories, makeup and personalized gift hampers from Banka, Bihar.">
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            color: #3d2933;
+            background: #fff8fb;
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        /* HEADER */
+
+        header {
+            background: #ffffff;
+            padding: 18px 6%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+        }
+
+        .logo {
+            font-size: 22px;
+            font-weight: bold;
+            color: #c84b7c;
+        }
+
+        nav a {
+            color: #5c3b48;
+            margin-left: 24px;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        /* HERO */
+
+        .hero {
+            min-height: 78vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 70px 20px;
+            background: linear-gradient(135deg, #ffe8f0, #fff8fb);
+        }
+
+        .hero-content {
+            max-width: 750px;
+        }
+
+        .small-title {
+            color: #c84b7c;
+            font-weight: bold;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            font-size: 13px;
+            margin-bottom: 15px;
+        }
+
+        .hero h1 {
+            font-family: Georgia, serif;
+            font-size: clamp(42px, 7vw, 72px);
+            color: #a93666;
+            line-height: 1.1;
+            margin-bottom: 18px;
+        }
+
+        .hero h2 {
+            font-size: 22px;
+            font-weight: normal;
+            color: #6d4b59;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            max-width: 600px;
+            margin: auto;
+            color: #765966;
+            font-size: 16px;
+        }
+
+        .buttons {
+            margin-top: 30px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 13px 25px;
+            border-radius: 30px;
+            margin: 6px;
+            font-weight: bold;
+            font-size: 14px;
+            transition: 0.2s;
+        }
+
+        .btn-primary {
+            background: #c84b7c;
+            color: white;
+        }
+
+        .btn-secondary {
+            border: 2px solid #c84b7c;
+            color: #c84b7c;
+            background: white;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+        }
+
+        /* SECTIONS */
+
+        section {
+            padding: 70px 6%;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 45px;
+        }
+
+        .section-title h2 {
+            font-family: Georgia, serif;
+            font-size: 38px;
+            color: #a93666;
+        }
+
+        .section-title p {
+            color: #80616d;
+            margin-top: 8px;
+        }
+
+        /* PRODUCTS */
+
+        .cards {
+            max-width: 1050px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .card {
+            background: white;
+            padding: 35px 25px;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(150,70,100,0.08);
+        }
+
+        .icon {
+            font-size: 45px;
+            margin-bottom: 15px;
+        }
+
+        .card h3 {
+            color: #a93666;
+            margin-bottom: 10px;
+            font-size: 21px;
+        }
+
+        .card p {
+            color: #725662;
+            font-size: 14px;
+        }
+
+        /* GIFT SECTION */
+
+        .gift {
+            background: #fff0f5;
+        }
+
+        .gift-box {
+            max-width: 850px;
+            margin: auto;
+            background: white;
+            border-radius: 25px;
+            padding: 45px 30px;
+            text-align: center;
+        }
+
+        .gift-box h2 {
+            font-family: Georgia, serif;
+            color: #a93666;
+            font-size: 34px;
+            margin-bottom: 15px;
+        }
+
+        /* HOW IT WORKS */
+
+        .steps {
+            max-width: 1000px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            text-align: center;
+        }
+
+        .step-number {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            background: #f5c1d3;
+            color: #8d3158;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 15px;
+            font-weight: bold;
+        }
+
+        .step h3 {
+            font-size: 17px;
+            color: #a93666;
+            margin-bottom: 8px;
+        }
+
+        .step p {
+            font-size: 13px;
+            color: #765966;
+        }
+
+        /* ORDER */
+
+        .order {
+            background: #a93666;
+            color: white;
+            text-align: center;
+        }
+
+        .order h2 {
+            font-family: Georgia, serif;
+            font-size: 38px;
+            margin-bottom: 12px;
+        }
+
+        .order p {
+            max-width: 600px;
+            margin: auto;
+            opacity: 0.95;
+        }
+
+        .price {
+            font-size: 24px;
+            font-weight: bold;
+            margin: 20px 0 5px;
+        }
+
+        .policy {
+            font-size: 13px;
+            margin-bottom: 20px;
+        }
+
+        .order .btn-primary {
+            background: white;
+            color: #a93666;
+        }
+
+        /* SOCIAL */
+
+        .social {
+            text-align: center;
+            background: #fff8fb;
+        }
+
+        .social a {
+            color: #c84b7c;
+            font-weight: bold;
+        }
+
+        /* FOOTER */
+
+        footer {
+            background: #3d2933;
+            color: #f9e8ee;
+            text-align: center;
+            padding: 30px 20px;
+            font-size: 13px;
+        }
+
+        footer a {
+            color: #f5b7cc;
+        }
+
+        /* MOBILE */
+
+        @media (max-width: 750px) {
+
+            header {
+                padding: 15px 5%;
+            }
+
+            .logo {
+                font-size: 17px;
+            }
+
+            nav {
+                display: none;
+            }
+
+            .hero {
+                min-height: 70vh;
+                padding: 55px 20px;
+            }
+
+            .hero h1 {
+                font-size: 48px;
+            }
+
+            section {
+                padding: 55px 5%;
+            }
+
+            .cards {
+                grid-template-columns: 1fr;
+            }
+
+            .steps {
+                grid-template-columns: 1fr 1fr;
+                gap: 30px 15px;
+            }
+
+            .section-title h2 {
+                font-size: 32px;
+            }
+
+            .order h2 {
+                font-size: 32px;
+            }
+        }
+
+        @media (max-width: 430px) {
+
+            .steps {
+                grid-template-columns: 1fr;
+            }
+
+            .hero h1 {
+                font-size: 42px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">A Mystery Scoop Shop</div>
+
+    <nav>
+        <a href="#products">Our Scoops</a>
+        <a href="#gifts">Gift Hampers</a>
+        <a href="#how">How It Works</a>
+        <a href="#order">Order</a>
+    </nav>
+</header>
+
+
+<!-- HERO -->
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <div class="small-title">Welcome to A Mystery Scoop Shop</div>
+
+        <h1>Hand-Scooped Surprises</h1>
+
+        <h2>Because the best gifts are the ones you don't see coming. 🎀</h2>
+
+        <p>
+            Discover the excitement of mystery scoops filled with accessories,
+            makeup and delightful surprises — or create a personalized gift
+            hamper for someone special.
+        </p>
+
+        <div class="buttons">
+
+            <a class="btn btn-primary"
+               href="https://wa.me/918240362609?text=Hi%20A%20Mystery%20Scoop%20Shop!%20I%20would%20like%20to%20know%20more%20about%20your%20mystery%20scoops."
+               target="_blank">
+                💬 Order on WhatsApp
+            </a>
+
+            <a class="btn btn-secondary"
+               href="https://www.instagram.com/amysteryscoopshop/"
+               target="_blank">
+                Instagram
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- PRODUCTS -->
+
+<section id="products">
+
+    <div class="section-title">
+
+        <h2>What's Inside?</h2>
+
+        <p>A little mystery. A little excitement. A lot of fun.</p>
+
+    </div>
+
+
+    <div class="cards">
+
+        <div class="card">
+
+            <div class="icon">🎁</div>
+
+            <h3>Mystery Scoops</h3>
+
+            <p>
+                Let the scoop decide! Discover fun and unexpected
+                accessories and beauty surprises.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="icon">💄</div>
+
+            <h3>Makeup</h3>
+
+            <p>
+                Beauty goodies that add a little extra excitement
+                to every mystery scoop.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="icon">✨</div>
+
+            <h3>Accessories</h3>
+
+            <p>
+                Cute and trendy accessories waiting to be
+                discovered in your surprise.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- GIFTS -->
+
+<section class="gift" id="gifts">
+
+    <div class="gift-box">
+
+        <div class="icon">💌</div>
+
+        <h2>Personalized Gift Hampers</h2>
+
+        <p>
+            Turn a simple gift into a memorable surprise.
+            Create a personalized hamper with a special message
+            for birthdays, celebrations, surprises or just because.
+        </p>
+
+        <div class="buttons">
+
+            <a class="btn btn-primary"
+               href="https://wa.me/918240362609?text=Hi!%20I%20would%20like%20to%20create%20a%20personalized%20gift%20hamper."
+               target="_blank">
+                Create My Hamper
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- HOW IT WORKS -->
+
+<section id="how">
+
+    <div class="section-title">
+
+        <h2>How It Works</h2>
+
+        <p>Simple, exciting and made with love.</p>
+
+    </div>
+
+
+    <div class="steps">
+
+        <div class="step">
+
+            <div class="step-number">1</div>
+
+            <h3>Choose</h3>
+
+            <p>
+                Pick your mystery scoop or tell us
+                what kind of gift you'd like.
+            </p>
+
+        </div>
+
+
+        <div class="step">
+
+            <div class="step-number">2</div>
+
+            <h3>Order</h3>
+
+            <p>
+                Place your order through WhatsApp,
+                Instagram or Facebook.
+            </p>
+
+        </div>
+
+
+        <div class="step">
+
+            <div class="step-number">3</div>
+
+            <h3>Prepay</h3>
+
+            <p>
+                Payment is made in advance.
+                We currently do not offer COD.
+            </p>
+
+        </div>
+
+
+        <div class="step">
+
+            <div class="step-number">4</div>
+
+            <h3>Unbox!</h3>
+
+            <p>
+                Receive your package and discover
+                the surprise inside. 💗
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ORDER -->
+
+<section class="order" id="order">
+
+    <h2>Ready to Scoop?</h2>
+
+    <p>
+        Your next little surprise is just a message away.
+        WhatsApp us to see what's available and place your order.
+    </p>
+
+    <div class="price">Starting from ₹299</div>
+
+    <div class="policy">
+        Prepaid Orders Only • No COD
+    </div>
+
+    <a class="btn btn-primary"
+       href="https://wa.me/918240362609?text=Hi%20A%20Mystery%20Scoop%20Shop!%20I'd%20like%20to%20place%20an%20order."
+       target="_blank">
+        💬 WhatsApp Us
+    </a>
+
+</section>
+
+
+<!-- SOCIAL -->
+
+<section class="social">
+
+    <div class="section-title">
+
+        <h2>Follow the Mystery</h2>
+
+        <p>
+            See our latest scoops, products and surprises on Instagram.
+        </p>
+
+    </div>
+
+    <a href="https://www.instagram.com/amysteryscoopshop/"
+       target="_blank">
+        @amysteryscoopshop
+    </a>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <p><strong>A Mystery Scoop Shop</strong></p>
+
+    <p>Hand-scooped surprises from Banka, Bihar 💗</p>
+
+    <p style="margin-top:10px;">
+        WhatsApp: <a href="https://wa.me/918240362609">8240362609</a>
+    </p>
+
+    <p style="margin-top:15px;">
+        © 2026 A Mystery Scoop Shop. All rights reserved.
+    </p>
+
+</footer>
+
+</body>
+</html>
